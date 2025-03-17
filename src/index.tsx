@@ -4,6 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Import i18n initialization
+import './i18n/i18n';
+
+// For chart.js to work properly in some browsers
+(window as any).global = window;
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

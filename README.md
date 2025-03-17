@@ -1,46 +1,128 @@
-# Getting Started with Create React App
+# Data Analysis UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A client-side data analysis tool that allows users to upload Excel files, edit them, and perform various analyses without requiring a backend server. All processing happens directly in the browser.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Excel File Handling**
+  - Upload Excel files
+  - View and edit data
+  - Add/remove rows and columns
+  - Save and download modified files
 
-### `npm start`
+- **Analysis Tools**
+  - **Sensitivity Analysis**: See how changes in input variables affect outputs
+  - **Correlation Analysis**: Discover relationships between variables
+  - **Alternative Methods**: Various data analysis techniques including:
+    - Linear Regression
+    - Data Ranking
+    - Normalization
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **User Interface**
+  - Modern responsive design
+  - Dark/light mode
+  - Customizable settings
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technology Stack
 
-### `npm test`
+- **React.js** - Frontend framework
+- **TypeScript** - Type-safe JavaScript
+- **Material-UI** - UI component library
+- **SheetJS** - Excel file processing
+- **Chart.js** - Data visualization
+- **React Router** - Navigation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (v14+)
+- npm or yarn
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository
+   ```
+   git clone <repository-url>
+   cd data-analysis-ui
+   ```
 
-### `npm run eject`
+2. Install dependencies
+   ```
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Start the development server
+   ```
+   npm start
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Open your browser and navigate to `http://localhost:3000`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Usage Guide
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Uploading Data
 
-## Learn More
+1. Navigate to the Data Viewer screen
+2. Use the file upload area to select an Excel file
+3. The data will be loaded and displayed in a table format
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Editing Data
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Click on any cell to edit its value
+2. Use the "Add Row" and "Add Column" buttons to extend your dataset
+3. Remove rows or columns using the delete icons
+4. Click "Save File" to download the modified Excel file
+
+### Performing Analysis
+
+#### Sensitivity Analysis
+1. Select input and output variables
+2. Adjust the percentage range and number of steps
+3. Click "Run Analysis" to see how changes in input affect the output
+
+#### Correlation Analysis
+1. Select variables to analyze
+2. Click "Calculate Correlations" to see the correlation matrix
+3. Interpret the results using the provided color-coded heatmap
+
+#### Alternative Methods
+1. Choose an analysis method (Regression, Ranking, or Normalization)
+2. Select variables to analyze
+3. Run the analysis and view the visual results
+
+## Deployment
+
+This application can be deployed to any static hosting service as it requires no backend:
+
+- GitHub Pages
+- Netlify
+- Vercel
+- Amazon S3
+- Firebase Hosting
+
+Example deployment to GitHub Pages:
+
+```
+npm run build
+npm install -g gh-pages
+gh-pages -d build
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- [SheetJS](https://sheetjs.com/) for the Excel handling capabilities
+- [Chart.js](https://www.chartjs.org/) for the visualization components
+- [Material-UI](https://mui.com/) for the UI components
